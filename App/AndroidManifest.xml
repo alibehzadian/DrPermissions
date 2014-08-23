@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ir.smartlab.permissions"
+    android:installLocation="auto"
+    android:versionCode="10"
+    android:versionName="3.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="ir.smartlab.permissions.App"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        <activity
+            android:name="ir.smartlab.permissions.Main"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ir.smartlab.permissions.CategoryDetail" />
+        <activity android:name="ir.smartlab.permissions.ApplicationDetail" />
+        <activity android:name="ir.smartlab.permissions.PermissionDetail" />
+        <activity android:name="ir.smartlab.permissions.Preference" />
+        <activity
+            android:name="ir.adad.AdadActivity"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+    </application>
+
+</manifest>

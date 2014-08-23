@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/HeaderBox" >
+
+        <TextView
+            style="@style/Text.Header"
+            android:text="@string/app_name" />
+
+        <ImageButton
+            android:id="@+id/reloadImageButton"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/selector_reload" />
+
+        <ImageButton
+            android:id="@+id/settingsImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_settings" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tab_category"
+            style="@style/tab"
+            android:text="@string/category_tab_name" />
+
+        <TextView
+            android:id="@+id/tab_permission"
+            style="@style/tab"
+            android:text="@string/permission_tab_name" />
+
+        <TextView
+            android:id="@+id/tab_application"
+            style="@style/tab"
+            android:text="@string/application_tab_name" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tabs"
+        style="@style/Box"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/listviewcategory"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent" />
+
+        <ListView
+            android:id="@+id/listviewpermission"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent" />
+
+        <ListView
+            android:id="@+id/listviewapplication"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent" />
+    </FrameLayout>
+
+    <!-- Adad -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ir.adad.AdView
+            android:id="@+id/ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            token="df5365a8b9c548c98e128644617614a3" />
+    </LinearLayout>
+
+</LinearLayout>
