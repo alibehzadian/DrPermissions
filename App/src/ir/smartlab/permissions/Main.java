@@ -1,11 +1,8 @@
 package ir.smartlab.permissions;
 
-import ir.smartlab.permissions.App.TrackerName;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -25,10 +22,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
-
-public class Main extends Activity {
+public class Main extends BaseActivity {
     private ListView lstCategory;
     private ListView lstApplication;
     private ListView lstPermission;
@@ -51,11 +45,7 @@ public class Main extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.main);
-
-        Tracker t = ((App) getApplication()).getTracker(TrackerName.APP_TRACKER);
-        t.send(new HitBuilders.AppViewBuilder().build());
 
         reloadImageButton = (ImageButton) findViewById(R.id.reloadImageButton);
         settingsImageButton = (ImageButton) findViewById(R.id.settingsImageButton);

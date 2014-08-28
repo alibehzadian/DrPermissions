@@ -1,7 +1,5 @@
 package ir.smartlab.permissions;
 
-import ir.smartlab.permissions.App.TrackerName;
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -20,10 +18,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
-
-public class ApplicationDetail extends Activity {
+public class ApplicationDetail extends BaseActivity {
     private ListView permissionList;
     private ImageButton manageButton;
     private String packageName;
@@ -34,9 +29,6 @@ public class ApplicationDetail extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.application_detail);
-
-        Tracker t = ((App) getApplication()).getTracker(TrackerName.APP_TRACKER);
-        t.send(new HitBuilders.AppViewBuilder().build());
 
         this.context = this;
         Intent thisIntent = getIntent();

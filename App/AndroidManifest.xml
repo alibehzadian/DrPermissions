@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.smartlab.permissions"
     android:installLocation="auto"
-    android:versionCode="10"
-    android:versionName="3.2" >
+    android:versionCode="11"
+    android:versionName="3.2.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="ir.smartlab.permissions.App"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >

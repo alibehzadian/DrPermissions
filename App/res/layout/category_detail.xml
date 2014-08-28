@@ -76,7 +76,7 @@
             android:id="@+id/ad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            token="df5365a8b9c548c98e128644617614a3" />
+            token="ADAD_TOKEN" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,11 +1,8 @@
 package ir.smartlab.permissions;
 
-import ir.smartlab.permissions.App.TrackerName;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -19,20 +16,13 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
-
-public class CategoryDetail extends Activity {
+public class CategoryDetail extends BaseActivity {
     ListView applicationList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.category_detail);
-
-        Tracker t = ((App) getApplication()).getTracker(TrackerName.APP_TRACKER);
-        t.send(new HitBuilders.AppViewBuilder().build());
 
         Intent thisIntent = getIntent();
         String categoryId = Long.toString(thisIntent.getExtras().getLong("categoryId"));
